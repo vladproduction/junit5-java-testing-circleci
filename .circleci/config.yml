@@ -5,6 +5,7 @@ jobs:
   test-java:
     docker:
       - image: cimg/openjdk:17.0
+    executor:
     steps:
       - checkout
       - run:
@@ -26,6 +27,7 @@ jobs:
     # This is an example deploy job, not actually used by the workflow
     docker:
       - image: cimg/base:stable
+    executor:
     steps:
       # Replace this with steps to deploy to users
       - run:
